@@ -1,0 +1,89 @@
+Java 8 provides following features for Java Programming:
+
+1.Lambda expressions,
+2.Method references,
+3.Functional interfaces,
+4.Optional class,
+5.ForEach() method,
+6.Default methods,
+7.Collectors class,
+8.Stream API,
+9.Base64 Encode Decode,
+10.Parallel Array Sorting
+11.Date and Time API
+12.Java StringJoiner
+=========================================================================================================================================
+
+1. Lambda Expressions :- Lambda expression helps us to write our code in functional style. 
+                         it helps to iterate, filter and extract data.
+
+               use :- To provide the implementation of Functional interface and Less coding.
+
+2. Method references :- A method reference is similar to a lambda expression that refers a method without executing it.
+                        Method reference is used to refer method of functional interface. 
+                        you can replace your lambda expression with method reference.
+
+                        There are three types of method reference:
+                        1. Reference to a static method.
+                        2. Reference to an instance method.
+                        3. Reference to a constructor.
+
+3. Functional Interface :- An Interface that contains only one abstract method is known as functional interface.
+                           It can have any number of default and static methods. It can also declare methods of object class.
+
+                           Functional interfaces are also known as Single Abstract Method Interfaces (SAM Interfaces).
+                           It is a new feature in Java, which helps to achieve functional programming
+
+   Java Predefined-Functional Interfaces:-
+   Java provides predefined functional interfaces to deal with functional programming by using lambda and method references.
+   Example :- BiFunction<T,U> , Consumer<T> ,Function<T,R> ,Predicate<T> , BiFunction<T,U,R> , BiPredicate<T,U>
+
+4. Optional :- It is a public final class and used to deal with NullPointerException in Java application.
+               You must import java.util package to use this class. 
+               its provide many methods:- Optional.empty, of , else , ofNullable, isPresent , isEmpty.
+
+5. Java forEach loop :- Java provides a new method forEach() to iterate the elements.
+                        It is a default method defined in the Iterable interface.
+
+                        This method takes a single parameter which is a functional interface. So, you can pass lambda expression as an argument.
+
+6. Default Methods :- Java provides a facility to create default methods inside the interface. 
+                      Methods which are defined inside the interface and tagged with default are known as default methods. 
+                      These methods are non-abstract methods.
+                      You can override default method also to provide more specific implementation for the method.
+
+              Concept :- The concept of default method is used to define a method with default implementation.
+
+7. Collectors class :- Collectors is a final class that extends Object class. 
+              It provides reduction operations, such as accumulating elements into collections, summarizing elements according to various criteria, etc.
+
+8. Java 8 Stream API :- Java provides a new additional package in Java 8 called java.util.stream. 
+			This package consists of classes, interfaces and enum to allows functional-style operations on the elements. 
+			You can use stream by importing java.util.stream package.
+  
+	Features:-  Stream does not store elements.
+                    Stream is functional in nature.
+                    Stream is lazy and evaluates code only when required.
+
+            use :-  You can use stream to filter, collect, print, and convert from one data structure to other etc. 
+
+
+9. Base64 Encode Decode:- Java provides a class Base64 to deal with encryption.
+                          You can encrypt and decrypt your data by using provided methods.
+                          You need to import java.util.Base64 in your source file to use its methods.
+                          This class provides three different encoders and decoders to encrypt information at each level.
+
+
+10.Parallel Array Sorting :-Java provides a new additional feature in Array class which is used to sort array elements parallel.
+                   method:- parallelSort().
+ 
+
+11. Date/Time API :- Java has introduced a new Date and Time API since Java 8.
+                    The java.time package contains Java 8 Date and Time classes.
+
+12. Java StringJoiner :- Java added a new final class StringJoiner in java.util package. 
+                         It is used to construct a sequence of characters separated by a delimiter.
+                         Now, you can create string by passing delimiters like comma(,), hyphen(-) etc. 
+
+
+               

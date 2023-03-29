@@ -1,0 +1,272 @@
+                                                       Spring Boot Questions :-
+
+1.  What is Spring boot?
+
+Ans: Spring boot is a Java-based spring framework used for Rapid Application Development 
+     (to build stand-alone microservices).
+
+    Features of Spring Boot :-
+1. It creates stand-alone Spring applications .
+2. It offers the number of plug-ins.
+3. There is no requirement for XML configuration.
+4. It increases productivity and reduces development time.
+
+    Spring Boot also provides (Application Properties)
+So , We can use that in the properties file of our project.
+The properties file is used to set properties like server-port =8082 , database connection.
+
+================================================================================================================================
+
+2. How does Spring Boot works?
+Ans: Spring Boot automatically configures your application based on the dependencies you have 
+     added to the project by using annotation. 
+     The entry point of the spring boot application is the class that contains @SpringBootApplication
+     annotation and the main method.
+
+================================================================================================================================
+
+3. What does the @SpringBootApplication annotation ?
+Ans= The @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration, and @ComponentScan .
+     Spring Boot enables the developer to use a single annotation instead of using multiple.
+
+================================================================================================================================
+
+4. What is the purpose of using @ComponentScan?
+Ans=Spring Boot application scans all the beans and package declarations when the application initializes. 
+    You need to add the @ComponentScan annotation for your class file to scan your components added to your project.
+
+================================================================================================================================
+
+5. How does a spring boot application get started?
+Ans=Spring Boot application must have a main method. This method serves as an entry point, which invokes the SpringApplication#run method 
+
+================================================================================================================================
+
+6. What is Spring Initializer?
+Ans= Spring Initializer is a web application that helps you to create an initial spring boot project structure.
+
+================================================================================================================================
+
+7. What Are the Basic Annotations that Spring Boot Offers?
+Ans= @SpringBootApplication – used to denote the main class of a Boot Application.
+     This annotation combines @Configuration, @EnableAutoConfiguration, and @ComponentScan annotations with their default attributes.
+
+================================================================================================================================
+
+8. What is the default port of tomcat in spring boot?
+Ans= The default port of the tomcat server-id = 8080. It can be changed by adding sever.port properties in the application.property file.
+
+================================================================================================================================
+
+9. Spring Boot Annotations?
+Ans= @RequestMapping :- RequestMapping can be used with GET, POST, PUT, and many other request methods using the method attribute on the annotation.
+
+     @GetMapping :-
+	 
+     @Bean :- The @Bean annotation are used at the method level and indicate that a method produces a bean which is managed by Spring container.
+
+     @Service :- It is used at the class level. It shows that the annotated class is a service class, such as business basic logic, and call external APIs.
+
+     1 st way
+     @Repository :- It is a Data Access Object that accesses the database directly. It indicates that the annotated class is a repository.
+     2 nd way
+     @Repository :- Spring @Repository annotation is used to indicate that the class provides the mechanism 
+                    for storage, retrieval, search, update and delete operation on objects.
+
+     @Controller :-This annotation indicates that the annotated class is a controller. 
+
+     @RestController :- the @restcontroller combination of the @controller and @ResponseBody annotation,it's used for creating a restful controller.
+	          	This annotation is used at the class level and allows the class to handle the requests made by the client.
+
+     @Autowired :- This annotation enables you to inject the object dependency implicitly.
+ 
+================================================================================================================================
+
+
+10. What is Rest API?
+
+Ans= REST API (REpresentational State Transfer Application program interface)  is an architectural style to be used for creating web services.
+     It’s used to fetch or give some information from a web service. All communication done with REST API uses only HTTP request. 
+     
+     A request is sent from client to server in the form of web URL as HTTP GET or POST or PUT or DELETE request. After that,
+     a response comes back from server in the form of a resource which can be anything like HTML, XML, Image or JSON.
+
+     In HTTP there are five methods which are commonly used in a REST based Architecture 
+     i.e., POST, GET, PUT, PATCH, and DELETE. 
+      
+     1. GET: The HTTP GET method is used to read a resource. 
+     2. POST: The POST method is used to create new resources.
+     3. PUT: It is used for updating the resources.
+     4. DELETE: It is used to delete a resource. 
+
+================================================================================================================================
+
+
+11. What is the primary difference between Spring and Spring Boot?
+Ans= Spring is a web application development framework whcich is based on Java. 
+     On the other hand Spring Boot is an extension of the spring framework 
+     which eliminated the boilerplate configuration required for setup a Spring application.
+     
+================================================================================================================================
+
+12. How can you connect Spring Boot to the database using JPA?
+Ans= Spring Boot supports spring-boot-data-JPA start, which helps you to connect spring application with a relational database.
+
+================================================================================================================================
+
+13. What are embedded containers support by Spring
+Ans=  Spring Boot support the main three embedded containers:
+
+      1) Tomcat
+
+      2) Jetty
+
+      3) Undertow.
+
+      By default, it uses Tomcat as an embedded container.
+
+================================================================================================================================
+
+13. What is difference between JpaRepository and CrudRepository?
+Ans= CrudRepository:- provides CRUD functions. PagingAndSortingRepository provides methods to do pagination and sort records.
+     JpaRepository :- provides JPA related methods such as flushing the persistence context and delete records in a batch.
+
+================================================================================================================================
+
+14. what is @Component?
+Ans= We can use @Component across the application to mark the beans as Spring's managed components.
+     Spring will only pick up and register beans with @Component, and doesn't look for @Service and @Repository in general.
+     They are registered in ApplicationContext because they are annotated with @Component:     
+
+     @Service and @Repository are special cases of @Component. They are technically the same, but we use them for the different purposes.
+
+================================================================================================================================
+
+15. what is @service?
+Ans= We mark beans with @Service to indicate that they're holding the business logic.
+
+================================================================================================================================
+
+16. What is the purpose of repository interface?
+Ans= An interface defines the repository with all logical read and write operations for a specific entity.
+
+================================================================================================================================
+
+17. What is difference between findById and getById?
+Ans= if we talk about findById() returns the actual object and getById returns a reference of the entity.
+
+================================================================================================================================
+
+18. What is JPA?
+Ans= The Java Persistence API (JPA) is the standard way of persisting java objects into relational databases.
+
+================================================================================================================================
+
+19. What is @RequestMapping annotation in spring boot?
+Ans= RequestMapping annotation is used to map web requests onto specific handler classes and/or handler methods.
+     @RequestMapping can be applied to the controller class as well as methods.
+
+================================================================================================================================
+
+20. What is the difference between Findallbyid and Findbyid?
+Ans= findAllBy returns a Collection but findBy returns Optional.
+
+================================================================================================================================
+
+21. Can we replace @service with @component?
+Ans= According to documentaion @Repository , @Service , @Controller are all synonyms. 
+     They all are just specializations of @Component annotation. So, generally, they can be used one instead of other.
+
+================================================================================================================================
+
+22. What is difference between @controller and @RestController?
+Ans= @Controller is used to mark classes as Spring MVC Controller. 
+     @RestController annotation is a special controller used in RESTful Web services, 
+     and @RestController is a combination of @Controller and @ResponseBody annotation. It is a specialized version of @Component annotation.
+
+================================================================================================================================
+
+23. What is @component and @ComponentScan and @configuration?
+Ans= @Component:- indicates that a class might be a candidate for creating a bean. 
+   
+     @ComponentScan :- scans for Spring components
+
+     @EnableAutoConfiguration :- is used for auto-configuring beans present in the classpath in Spring Boot applications
+
+================================================================================================================================
+
+24. What is microservices?
+Ans :- Microservices are a software architectural style in which a large application is built as a collection of small, 
+       independent services that communicate with each other over a network.
+
+       Example :- Amazon uses a specialized microservice to process shipping orders. 
+
+================================================================================================================================
+
+
+12. ( Flow ) Spring Boot – Architecture :-
+
+Ans:- Spring Boot Layers
+The spring boot consists of the following four layers: 
+
+    1. Presentation Layer  (Controller Layer) :- its top layer of springboot It handles the HTTP requests and performs authentication. 
+                                   (optional)    It is responsible for converting the JSON field’s parameter to Java Objects 
+
+    2. Business Layer      (Service Layer)    :- The business layer contains all the business logic and validation. 
+
+    3. Persistence Layer   (Repository Layer) :- The persistence layer contains all the database storage logic.
+
+    4. Database Layer      (Database Layer)   :- It is responsible for performing the CRUD operations.
+
+
+
+==========================================================================================================================================================
+
+13. What is maven and gradle?
+
+Ans:-  Maven and Gradle is build automation tools which is used to manage the dependecies and build the process of application is automate.
+       
+       Maven :- 1.Maven is an popular build atomation tool which is used to manage the dependency and project.
+                2.With the help of maven we can generate the jar, war, pom files in our project.
+                3.In there Maven Pom.xml we can write a code of dependencies, pulgins and other configuration.
+                4.With the help of groupId, artifactId and version we can define dependecies.
+                5.Maven build process download the dependecies with the help of maven repository.
+                6.with the help of Command line tool we can build the project and packaging
+                7.Simplfy the build process of project.
+
+       Advantages of Maven :-
+
+       • Easy project setup
+       • Consistent build process
+       • Easy dependency management
+       • Multiple project support
+       • Supports various plugins for additional functionality
+
+
+       Gradle :- 1.Gradle is also popular build atomation tool which is used to manage the dependency and project and its come after maven.
+                 2.With the help of Gradle we can generate the jar, war, pom files in our project.
+                 3.In the process of gradle build we can use groovy-based build scripts
+                 3.With the help of Gradle build scripts we can add dependencies and pulgins.
+                 4.With the help of groupId, artifactId and version we can define dependecies.
+                 5.Gradle build process download the dependecies with the help of maven repository.
+                 6.with the help of Command line tool we can build the project and packaging
+                 7.Simplfy the build process of project.
+
+       Advantages of Gradle :-
+ 
+       • Faster build process compared to Maven
+       • Highly customizable build process
+       • Supports both Groovy and Kotlin-based build scripts
+       • Supports various plugins for additional functionality
+
+       Main Difference Between Maven And Gradle is :-
+
+       1. Maven is XML based tool and gradle is groovy and Kotlin based tool.
+       2. Gradle is faster process as compared to maven.
+       3. In Gradle we can write a code in build script and other hand In Maven we can write code in XML files.
+
+       Overall, both Maven and Gradle are powerful build automation tools that can simplify the project management and build process.
+
+    
+
+==========================================================================================================================================================

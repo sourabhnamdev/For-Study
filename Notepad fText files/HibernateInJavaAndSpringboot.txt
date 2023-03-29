@@ -1,0 +1,142 @@
+
+                                                      Hibernate 
+					             ===========
+1. what is hibernate ?
+
+Ans:- Haan, main aapko Hibernate ke bare mein padha sakta hoon.
+     Hibernate ek open-source Java framework hai jo relational database ke saath kaam karne mein help karta hai. 
+     Iske through aap Java applications mein database ko access kar sakte hain.
+
+     Hibernate ko use karke, aap database tables ko Java classes mein map kar sakte hain,
+     jisse aap data ko easily manipulate kar sakte hain. 
+     Iske alawa, Hibernate ORM (Object-Relational Mapping) technique ka use karta hai, 
+     jisse ki database operations ko simplify karne mein help karta hai. 
+
+================================================================================================================================
+
+2. what is hibernate annotations ?
+
+Ans:- Haan, main aapko kuch common (Basic) Hibernate annotations ke baare mein batata hoon:
+      ====================================================================================
+
+    @Entity - Yeh annotation use kiya jaata hai class ko bataane ke liye ki yeh database table ke saath map kiya ja sakta hai.
+
+    @Table - Yeh annotation use kiya jaata hai database table ka naam set karne ke liye.
+
+    @Id - Yeh annotation use kiya jaata hai primary key field ko set karne ke liye.
+
+    @GeneratedValue - Yeh annotation use kiya jaata hai primary key field ka value automatically generate karne ke liye.
+
+    @Column - Yeh annotation use kiya jaata hai database table ka column name set karne ke liye.
+
+    @OneToMany - Yeh annotation use kiya jaata hai one-to-many relationship ko set karne ke liye.
+
+    @ManyToOne - Yeh annotation use kiya jaata hai many-to-one relationship ko set karne ke liye.
+
+    @JoinTable - Yeh annotation use kiya jaata hai join table ko create karne ke liye, jab aap many-to-many relationship ko set karte hain.
+
+    @Transient - Yeh annotation use kiya jaata hai field ko transient banaane ke liye, jisse ki field database table se ignore kiya jaaye.
+
+    @Embedded - Yeh annotation use kiya jaata hai embedded object ko define karne ke liye,
+                jo database table mein separate columns mein store nahi kiya jaata hai.
+
+    @Embeddable - Yeh annotation use kiya jaata hai embedded object ko define karne ke liye, jo ek se adhik columns mein store kiya jaata hai.
+
+    @ElementCollection - Yeh annotation use kiya jaata hai collection ke elements ko database mein store karne ke liye, jaise ki List, Set, Map, etc.
+
+    @JoinColumns - Yeh annotation use kiya jaata hai join columns ko define karne ke liye, jab aap many-to-one relationship ko set karte hain.
+
+    @SecondaryTable - Yeh annotation use kiya jaata hai secondary table ko define karne ke liye.
+
+    @SecondaryTables - Yeh annotation use kiya jaata hai multiple secondary tables ko define karne ke liye.
+
+    @DiscriminatorColumn - Yeh annotation use kiya jaata hai discriminator column ko define karne ke liye,
+                           jisse ki inheritance mapping ke liye use kiye jaane wale table mein class ka type identify kiya ja sake.
+
+    In annotations ka use karke aap database tables ko Java classes ke saath map kar sakte hain 
+    aur Hibernate ORM ke through database operations ko perform kar sakte hain.
+
+    Haan, kuch aur common Hibernate annotations ke baare mein bata deta hoon :
+    ========================================================================
+
+    @Temporal - Yeh annotation use kiya jaata hai date aur time ko database mein store karne ke liye.
+
+    @Enumerated - Yeh annotation use kiya jaata hai enum type ke field ko database mein store karne ke liye.
+
+    @Lob - Yeh annotation use kiya jaata hai large object (LOB) ko database mein store karne ke liye, jaise ki text, image, video, etc.
+
+    @Version - Yeh annotation use kiya jaata hai optimistic locking ke liye.
+               Isse Hibernate multiple users ke saath database ko access karte time data consistency maintain kar sakta hai.
+
+    @Cascade - Yeh annotation use kiya jaata hai related entities ke saath actions ko cascade karte time perform karne ke liye, 
+               jaise ki delete, persist, etc.
+
+    @Fetch - Yeh annotation use kiya jaata hai related entities ko fetch karne ke liye, jaise ki lazy or eager fetch.
+
+    @Formula - Yeh annotation use kiya jaata hai computed field ko create karne ke liye, jo database table mein nahi hai.
+
+    In annotations ka use karke aap Hibernate ke features ko aur bhi customise kar sakte hain
+    aur database operations ko perform karne ke liye flexible ways ka use kar sakte hain.
+
+    Yahaan kuch aur important annotations ke baare mein bataya ja raha hai :
+    ======================================================================
+
+    @NamedQuery - Yeh annotation use kiya jaata hai pre-defined query ko define karne ke liye, jisse ki baar-baar query likhne ki jarurat nahi hoti.
+
+    @NamedQueries - Yeh annotation use kiya jaata hai multiple named queries ko define karne ke liye.
+
+    @NamedNativeQuery - Yeh annotation use kiya jaata hai SQL query ko define karne ke liye.
+
+    @NamedNativeQueries - Yeh annotation use kiya jaata hai multiple named SQL queries ko define karne ke liye.
+
+    @Where - Yeh annotation use kiya jaata hai entity ke saath where clause ko set karne ke liye.
+
+    @DynamicUpdate - Yeh annotation use kiya jaata hai entity ke update ko dynamic tarike se karne ke liye.
+
+    @BatchSize - Yeh annotation use kiya jaata hai batch processing ko enable karne ke liye, jisse ki multiple database operations ko ek saath perform kiya ja sake.
+
+    @Immutable - Yeh annotation use kiya jaata hai entity ko immutable banaane ke liye, jisse ki usse kisi bhi tarah ka modification nahi kar sakte.
+
+    @Proxy - Yeh annotation use kiya jaata hai entity ko proxy object ke saath associate karne ke liye.
+
+    In annotations ke use se aap Hibernate ORM ke bahut saare features ko aur bhi customise kar sakte hain aur database operations ko perform karne ke liye flexible ways ka use kar sakte hain.
+
+================================================================================================================================
+
+3. Process of Hibernate Implement in spring boot?
+
+Ans :-Spring Boot ek popular framework hai jo Java applications develop karne mein help karta hai.
+
+      Spring Boot ke saath Hibernate ka use karne ke liye, 
+
+      aapko kuch steps follow karne hote hain :
+      =======================================
+ 
+      Steps: 1 Add Hibernate and Database Driver Dependency: 
+               Aapko build file (pom.xml for Maven or build.gradle for Gradle) mein Hibernate aur database driver dependency add karna hoga. 
+
+      Steps: 2 Configure Database Connection: 
+               Aapko application.properties file mein database connection ke liye properties configure karna hoga.
+
+      Steps: 3 Create Entity Classes: 
+               Aapko Java classes create karna hoga jinhe database tables se map kiya ja sakta hai. 
+
+      Steps: 4 Create Repository Interface:
+               Aapko Spring Data JPA ka use karke repository interface create karna hoga jisse ki database operations ko perform kiya ja sake. 
+
+      Steps: 5 Use Repository in Service:
+               Aapko service class mein UserRepository ka use karke database operations ko perform karna hoga. 
+
+
+      Yeh steps follow karke aap Hibernate ko Spring Boot ke saath use kar sakte hain. 
+
+================================================================================================================================
+
+4. Lazy loading and eager loding?
+Ans:- @OneToMany and @ManyToMany associations are defaulted to LAZY loading; and
+      @OneToOne and @ManyToOne are defaulted to EAGER loading. 
+
+      To enable lazy loading explicitly you must use “fetch = FetchType.LAZY” 
+
+      Example :- @OneToMany( mappedBy = "category", fetch = FetchType.LAZY )
+                 private Set<ProductEntity> products;

@@ -1,0 +1,447 @@
+1. Palimdrom no or not. 
+
+2. Reverse string without using string method . 
+
+3. WAP to convert string  lowercase to upper case without using inbuild method. 
+
+4. List, set, map same programs ( how to add and how to iterate data). 
+
+5. Array sorting ( ye confirm karke bata ta hu).
+
+6. WAP to minimum Array value.
+
+7. WAP to maximum Array value.
+
+8. WAP to Even or Odd.
+
+9. WAP to Fibonacci Series,
+
+10 WAP to Factorial no.
+
+
+
+=========================================================
+
+Collections Programs for interview :-
+
+1//Example of Map program :
+
+package com.javaprogram.example;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class MapExample {
+	public static void main(String[] args) {
+		Map<Integer, String> obj = new HashMap<Integer, String>();
+		obj.put(1, "sourabh");
+		obj.put(2, "rishabh");
+		obj.put(5, "aamit");
+		obj.put(3, "sourabh");
+		obj.put(4, "rishabh");
+
+		for (Entry<Integer, String> mapValue : obj.entrySet()) {
+			System.out.println("Keys  :-" + mapValue.getKey());
+			System.out.println("Values :-" + mapValue.getValue());
+		}
+
+	}
+
+}
+----------------
+OutPut:-
+Keys  :-1
+Values :-sourabh
+Keys  :-2
+Values :-rishabh
+Keys  :-3
+Values :-sourabh
+Keys  :-4
+Values :-rishabh
+Keys  :-5
+Values :-aamit
+----------------
+
+===========================================================
+2// palimdrom or not
+package com.javaprogram.example;
+
+public class PalindromeNumber {
+
+         /* 1st way
+	 public static void main(String args[]){  
+		  int r,sum=0,temp;    
+		  int n=121; 
+		  temp=n;  
+		  
+		  while(n>0){    
+		   r=n%10;   
+		   sum=(sum*10)+r;    
+		   n=n/10;    
+		  }    
+		  if(temp==sum)    
+		   System.out.println("Palindrome Number ");    
+		  else    
+		   System.out.println("Not Palindrome Number");    
+		} */
+
+	/*
+	//2nd Way
+	public static void main(String[] args) {
+		String str = "racecar";
+		String reversed = "";
+		for (int i = str.length() - 1; i >= 0; i--) {
+			reversed += str.charAt(i);
+		}
+		boolean isPalindrome = str.equalsIgnoreCase(reversed);
+		System.out.println("Is palindrome: " + isPalindrome);
+	}
+	*/
+ 
+}
+
+------
+1st output:- Palindrome Number 
+2nd output:- Is palindrome: true
+------
+============================================================
+
+3//Example of list program:-
+
+package com.javaprogram.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListPrograms {
+	public static void main(String args[]) {
+		List<String> obj = new ArrayList<String>();
+		obj.add("sourabh");
+		obj.add("rishabh");
+		obj.add("aamit");
+		obj.add("sourabh");
+		obj.add("rishabh");
+
+		for (String singleStringValue : obj) {
+			System.out.println("Values of list :- " + singleStringValue);
+
+		}
+	}
+}
+
+----------
+OutPut :-
+Values of list :- sourabh
+Values of list :- rishabh
+Values of list :- aamit
+Values of list :- sourabh
+Values of list :- rishabh
+----------
+
+==============================================================
+
+4//Example of list (uper wsala string ke liye tha ye integer ke liye he ):
+
+package com.javaprogram.example;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListForIntegerValuePrograms {
+	public static void main(String args[]) {
+		List<Integer> obj = new ArrayList<Integer>();
+		obj.add(1);
+		obj.add(2);
+		obj.add(3);
+		obj.add(4);
+		obj.add(5);
+
+		for (Integer singleStringValue : obj) {
+			System.out.println("Values of list :- " + singleStringValue);
+			
+		}
+	}
+}
+
+
+-------------------
+output :-
+
+Values of list :- 1
+Values of list :- 2
+Values of list :- 3
+Values of list :- 4
+Values of list :- 5
+-------------------
+
+====================================================================
+
+
+5//example of set (same program he bas list ki jagh set aagya he)
+package com.javaprogram.example;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetPrograms {
+	public static void main(String args[]) {
+		Set<Integer> obj = new HashSet<Integer>();
+		obj.add(1);
+		obj.add(2);
+		obj.add(5);
+		obj.add(4);
+		obj.add(5);
+
+		for (Integer singleStringValue : obj) {
+			System.out.println("Values of list :- " + singleStringValue);
+
+		}
+	}
+}
+
+
+---------------
+Values of list :- 1
+Values of list :- 2
+Values of list :- 4
+Values of list :- 5
+---------------
+
+==================================================================================
+==================================================================================
+
+//String Programs:-
+
+1// write a program to reverse string without using reverse method.
+ //There is two way to reverse string without using reverse method
+public class StringReverseWithoutReverseMethod{
+        /* 1st way
+        public static void main(String[] args) {
+ 
+           String name = "GauravKukade";
+           String reversedString = "";
+ 
+        for (int i = name.length() - 1; i >= 0; i--) {
+            reversedString = reversedString + name.charAt(i);
+        }
+ 
+           System.out.print("The reversed string of the '" + name + "' is: ");
+           System.out.println(reversedString);
+        }*/
+
+        /* 2nd way
+        public static void main(String[] args) {
+		String str = "Hello";
+		String reversed = "";
+		for (int i = str.length() - 1; i >= 0; i--) {
+			reversed += str.charAt(i);
+		}
+		System.out.println("Reversed string: " + reversed);
+	}*/
+}
+------------
+output:- The reversed string of the 'GauravKukade' is: edakuKvaruaG
+------------
+Note:- You can use the charAt() method of the String class to get the character 
+at any particular index of the string
+
+==================================================================================
+
+2//A Java program to convert the String to an integer.
+
+public class StringToInteger {
+ 
+    public static void main(String[] args) {
+ 
+        String str = "1234";
+ 
+        int result = Integer.parseInt(str); // using Integer.parseInt()
+        // int result2 = Integer.valueOf(str); //using Integer.valueOf()
+ 
+        System.out.println("The converted int is: " + result);
+ 
+    }
+ 
+}
+----------
+output:-
+The converted int is: 1234
+----------
+
+==================================================================================
+
+3// A Java program to remove characters from the String.
+
+public class RemoveCharacters {
+
+    public static void main(String[] args) {
+
+        String inputString = "GauravKukade";
+        char ch = 'a';
+        String result = removeCharacters(inputString, ch); // pass the inputString and char you want to remove
+
+        System.out.println("After removing character '" + ch + "' from the inputString '" + inputString
+                + "' the result will be: \n" + result);
+
+    }
+
+    // a method to remove any particular char from the string
+    public static String removeCharacters(String str, char ch) {
+
+        String result = str.replace("a", "");
+        return result;
+    }
+}
+
+-----------
+output:-
+After removing character 'a' from the inputString 'GauravKukade' the result will be: 
+GurvKukde
+-----------
+
+======================================================================================
+
+4//A Java program to count the words form the string.
+
+package com.javaprogram.example;
+
+public class CountStringWords {
+	public static void main(String[] args) {
+
+		String inputString = "Arise! Awake! and stop not until the goal is reached.";
+		System.out.println("The input string is : \n" + inputString + "\n");
+		System.out.println("Count words using split() method: " + countWordsUsingSplit(inputString));
+	}
+
+	// method to count words using the split() method
+	public static int countWordsUsingSplit(String inputString) {
+
+		String[] stringArray = inputString.split("\\s+"); // splitting the string using space/spaces
+		return stringArray.length; // returning the length of the array i.e number of words in the string
+	}
+}
+
+--------
+output:-
+The input string is : 
+Arise! Awake! and stop not until the goal is reached.
+
+Count words using split() method: 10
+--------
+======================================================================================
+
+5//A java program to swap strings without using the third variable.
+
+package com.javaprogram.example;
+
+public class SwapStrings {
+
+    public static void main(String[] args) {
+
+        String firstString = "one";
+        String secondString = "two";
+
+        System.out.println("Before swapping....");
+        System.out.println("The first String  = " + firstString);
+        System.out.println("The second String = " + secondString);
+
+        firstString = firstString + secondString; // step 1
+        secondString = firstString.substring(0, (firstString.length() - secondString.length())); // step 2
+        firstString = firstString.substring(secondString.length()); // step 3
+
+        System.out.println("\nAfter swapping....");
+        System.out.println("The first String  = " + firstString);
+        System.out.println("The second String = " + secondString);
+
+    }
+
+}
+----------
+output:-
+Before swapping....
+The first String  = one
+The second String = two
+
+After swapping....
+The first String  = two
+The second String = one
+----------
+
+=========================================================================
+
+6//Get length of a String
+
+package com.javaprogram.example;
+
+public class StringLength {
+
+	public static void main(String[] args) {
+
+		// create a string
+		String greet = "Hello! World";
+		System.out.println("String: " + greet);
+
+		// get the length of greet
+		int length = greet.length();
+		System.out.println("Length: " + length);
+	}
+
+}
+
+-----------
+output:-
+String: Hello! World
+Length: 12
+-----------
+========================================================================
+
+7//Counting the number of vowels in a string:
+
+package com.javaprogram.example;
+
+public class CountVowels {
+	public static void main(String[] args) {
+		String str = "Hello";
+		int vowels = 0;
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+				vowels++;
+			}
+		}
+		System.out.println("Number of vowels: " + vowels);
+	}
+}
+
+-----------------
+output:- Number of vowels: 2
+-----------------
+
+========================================================================
+
+8//Removing duplicates from a string:
+
+package com.javaprogram.example;
+
+public class RemoveDuplicates {
+	public static void main(String[] args) {
+		String str = "hello";
+		String unique = "";
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (!unique.contains(ch + "")) {
+				unique += ch;
+			}
+		}
+		System.out.println("String without duplicates: " + unique);
+	}
+}
+
+----------
+output :- String without duplicates: helo
+----------
+========================================================================
+

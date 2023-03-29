@@ -1,0 +1,4 @@
+public List<String> getCompanyListOfCompanyUser() {
+		List<CompanyUserDto> companyDetails = companyUserRepository.findAllByUserId(AppContext.getUserId());
+		return companyDetails.stream().map(CompanyUserDto::getCompanyName).toList();
+	}

@@ -1,0 +1,82 @@
+SELECT u.id,user_name,user_type ,u.status,u.created_date,mobile_number,
+ua.user_group_id,
+ugf.function_code ,ugf.user_group_code ,
+ugf.is_approval_level_1,ugf.is_approval_level_2,ugf.is_approval_level_3,
+ugf.is_add,ugf.is_view,ugf.is_edit,ugf.is_delete  FROM `user` u 
+ JOIN user_access ua 
+ON u.id = ua.user_id 
+ JOIN user_group ug 
+ON ua.user_group_id  = ug.id  
+ JOIN user_group_function ugf 
+ON ug.id = ugf.user_group_id WHERE u.id ='9a6df752-27f3-48e6-a9e9-2b6d95556045' and u.user_type in('BRANCH_USER','COMPANY_USER','STAFF')
+ORDER by u.created_date DESC 
+
+
+
+//	default public  List<CommonTopupTransactionDTO> getTopupReportDetails(String mobileNumber, String topupType, String urn,
+//			String originatorType, String walletType, String remitterId, String originatingPersonName,
+//			String statusCode, String approverId) {
+//
+//		List<Predicate> predicates = new ArrayList<>();
+//		CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+//		CriteriaQuery<CommonTopupTransactionDTO> criteriaQuery = builder.createQuery(CommonTopupTransactionDTO.class);
+//		Root<CommonTopupTransactionDTO> userRoot = criteriaQuery.from(CommonTopupTransactionDTO.class);
+//		criteriaQuery.select(userRoot);
+//		if (mobileNumber != null) {
+//			predicates.add(builder.and(userRoot.get("mobileNumber").in(mobileNumber)));
+//		}
+//		if (topupType != null) {
+//			predicates.add(builder.and(userRoot.get("topupType").in(topupType)));
+//		}
+//		if (urn != null) {
+//			predicates.add(builder.and(userRoot.get("customerUrn").in(urn)));
+//		}
+//		if (originatorType != null) {
+//			predicates.add(builder.and(userRoot.get("originatorType").in(originatorType)));
+//		}
+//		if (walletType != null) {
+//			predicates.add(builder.and(userRoot.get("accountType").in(walletType)));
+//		}
+//		if (remitterId != null) {
+//			predicates.add(builder.and(userRoot.get("originatorId").in(remitterId)));
+//		}
+//		if (originatingPersonName != null) {
+//			predicates.add(builder.and(userRoot.get("customerName").in(originatingPersonName)));
+//		}
+//		if (statusCode != null) {
+//			predicates.add(builder.and(userRoot.get("statusCode").in(statusCode)));
+//		}
+//		if (approverId != null) {
+//			predicates.add(builder.and(userRoot.get("approverId").in(approverId)));
+//		}
+//
+//		return entityManager.createQuery(criteriaQuery.select(userRoot).where(predicates.toArray(new Predicate[] {})))
+//				.getResultList();
+//	}
+
+
+#################### Customer Native Query ################33
+//	String createQuery(ModuleName module, String function, String action, LocalDate fromDate, LocalDate toDate) {
+//		log.info("creating Query ");
+//
+//		String query = "SELECT module_name as ModuleName ,function_code as FunctionCode ,action_code as ActionCode,"
+//				+ "DATE_FORMAT(event_date, '%Y-%m-%d') as EventDate,event_status_code as EventStatusCode ,value5 as UserId ,"
+//				+ " json_different as jsonDifference  " + "FROM " + module.name().toLowerCase() + "_event_log where ";
+//		if (StringUtils.isNotBlank(function)) {
+//			query = query + " function_code = '" + function + "' and";
+//		}
+//		if (StringUtils.isNotBlank(action)) {
+//			query = query + " action_code = '" + action + "' and ";
+//		}
+//
+//		if (org.apache.commons.lang3.ObjectUtils.isNotEmpty(fromDate)
+//				&& org.apache.commons.lang3.ObjectUtils.isNotEmpty(toDate)) {
+//			query = query + " event_date between '" + fromDate.atStartOfDay() + "' and '" + toDate.atStartOfDay().plusDays(1) + "' order by event_date";
+//		}
+//		query = query + " ;";
+//		log.info("Query is :- " + query);
+//		return query;
+//	}
+
+
+

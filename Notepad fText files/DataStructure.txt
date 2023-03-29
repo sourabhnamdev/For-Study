@@ -1,0 +1,173 @@
+************************************ Data Structure *******************************************
+Topics of Data Structure :- Array, Pointer, Structure, Linked List, Stack, Queue,Graph, 
+                            Searching, Sorting, Programs, etc.
+
+
+Data Structure :- Data structure name indicates itself that organizing the data in memory.
+==============    Data Structure is not any programming language like c,c++,java etc.
+                  Its set of algorithms that we can use in any p.language to stuct the data in memory. 
+
+                  Data Structure is a way to store and organize data so that it can be used efficiently.
+                  Here, we have used the word efficiently, which in terms of both the space and time.
+   
+                  Time efficiency - a measure of amount of time for an algorithm to execute. 
+                  ===============
+                  Space efficiency - a measure of the amount of memory needed for an algorithm to execute.
+                  ===============
+
+Advantages of Data structures :- 
+=============================
+ 
+        1. Efficiency:- If the choice of a data structure for implementing a particular ADT is proper,
+                        it makes the program very efficient in terms of time and space.
+
+        2. Reusability: The data structure provides reusability means that multiple client programs can use the data structure.
+
+        3. Abstraction: The data structure specified by an ADT also provides the level of abstraction. 
+                        The client cannot see the internal working of the data structure,
+                        so it does not have to worry about the implementation part. The client can only see the interface.
+
+Why should we learn Data Structures :- 1. Data Structures and Algorithms are two of the key aspects of Computer Science.
+===================================    2. Data Structures allow us to organize and store data, 
+                                          whereas Algorithms allow us to process that data meaningfully.
+                                       3. Learning Data Structures and Algorithms will help us become better Programmers.
+                                       4. We will be able to write code that is more effective and reliable.
+				       5. We will also be able to solve problems more quickly and efficiently.
+
+
+Types of Data Structures :-
+===========================
+
+There are two types of data structures:-
+
+1. Primitive data structure
+2. Non-primitive data structure
+
+   Primitive Data structure :- The primitive data structures are primitive data types. 
+   ========================    The int, char, float, double, and pointer are the primitive data structures that can hold a single value.
+
+   Non-Primitive Data structure :- The non-primitive data structure is divided into two types:
+   ============================
+                                   1. Linear data structure
+                                   2. Non-linear data structure 
+
+         Linear data structure :- one element is connected to one another element is called linear form.
+         =====================    In these case, the elements are arranged in a sequential manner.
+                                  The best example is Arrays, Linked list, Stacks, and Queues:
+
+                                  Static Data Structures: In the static DS, size is allocated at the compile time and the maximum size is fixed.
+                                  ====================== 
+					                  -Array is static l.d.s.
+
+				  Dynamic Data Structures: In the Dynamic DS, size is allocated at the run time and maximum size is flexible.
+				  ======================= 
+                                                          -Linked list, Stacks, and Queues is dynamic l.d.s.
+                                  
+
+         Non-linear data structure :- one element is connected to the 'n' number of elements known as a non-linear data structure.
+         =========================    The best example is trees and graphs. 
+                                      In this case, the elements are arranged in a random manner.
+
+==================================================================================================================================================
+
+  Major Operations :- common operations that can be performed on the data structures are:
+  ================    
+                      Searching: We can search for any element in a data structure.
+                      =========                                                                                            
+                      Sorting:   We can sort the elements of a data structure either in an ascending or descending order.
+                      =========                                                                                             
+                      Insertion: We can also insert the new element in a data structure.
+                      =========                                                                                            
+                      Updation:  We can also update the element, i.e., we can replace the element with another element.
+                      =========                                                                                            
+                      Deletion:  We can also perform the delete operation to remove the element from the data structure.
+                      =========                                                                                            
+
+==================================================================================================================================================
+
+There are many ways of organizing the data in the memory (linear and Non linear):-
+================================================================================
+
+1. Array  :- 1. Array is a collection of memory elements in which data is stored sequentially.
+   =====     2. Array stores the elements in a continuous manner.
+             3. This organization of data is done with the help of an array of data structures. 
+
+2. Linked Lists :- 1. A Linked List is used to store a collection of data elements dynamically.
+   ============    2. Data elements in this data structure are represented by the Nodes, connected using links or pointers.
+                   3. Each node contains two fields, the information field consists of the actual data, 
+                      and the pointer field consists of the address of the subsequent nodes in the list.
+                   4. The pointer of the last node of the linked list consists of a null pointer.
+             use:- 5. We can also implement Operating System's function for dynamic memory management.
+                   6. Linked Lists also allow polynomial implementation for mathematical operations.
+
+   Linked Lists can be classified into different types :-
+   ===================================================
+               1. Singly Linked List:- 1. A Singly Linked List is the most common type of Linked List.
+                                          Each node has data and a pointer field containing an address to the next node.
+             
+               2. Doubly Linked List:- 1. A Doubly Linked List consists of an information field and two pointer fields. 
+                                          The information field contains the data.
+                                          The first pointer field contains an address of the previous node, 
+                                          whereas another pointer field contains a reference to the next node.
+
+                                       2. we can go in both directions (backward as well as forward).
+
+                                 use:- 3. Doubly Linked List is utilized to implement forward and backward buttons
+                                          in a browser to move forward and backward in the opened pages of a website.
+               
+               3. Circular Linked List:- 1. The Circular Linked List is similar to the Singly Linked List.
+                                            The only key difference is that the last node contains the address of the first node.
+                                         2. We can use Circular Linked List to implement Operating Systems or application functions
+                                            that Round Robin execution of tasks.
+                                   use:- 3. Circular Linked List is also helpful in a Slide Show 
+                                            where a user requires to go back to the first slide after the last slide is presented.
+
+3. Stacks :- 1. A Stack is a Linear Data Structure that follows the LIFO (Last In, First Out) principle 
+   ======       that allows operations like insertion and deletion from one end of the Stack, i.e., Top.
+
+          Ex:-  Real-life examples of Stacks are piles of books, a deck of cards, piles of money, and many more.
+
+          The primary operations in the Stack are as follows:-
+          ==================================================
+
+               1. Push :- Operation to insert a new element in the Stack is termed as Push Operation.
+                  ====
+               2. Pop:- Operation to remove or delete elements from the Stack is termed as Pop Operation.
+                  ====                   
+
+          Uses :- 1. The Stack is used as a Temporary Storage Structure for recursive operations.
+          =====   2. We can manage function calls using Stacks.
+                  3. Stacks are also utilized to evaluate the arithmetic expressions in different programming languages.
+                  4. Stacks are also helpful in converting infix expressions to postfix expressions.
+	          5. Stacks can be used to reverse a String.
+		  6. We can use Stacks in depth-first search in graph and tree traversal.
+                  7. Stacks are also used in Operating System functions.
+    	   	  8. Stacks are also used in UNDO and REDO functions in an edit.
+
+4. Queues :- 1. A Queue is a Linear Data Structure that follows the FIFO (First In, First Out) principle. 
+             2. A Queue is similar to a Stack with some limitations on the insertion and deletion of the elements.
+             3. The insertion of an element in a Queue is done at one end, and the removal is done at opposite end.
+             4. mplementation of Queues can be done using Arrays, Linked Lists, or Stacks. 
+             5. real-life examples of Queues are a line at the ticket counter, an escalator, a car wash, and many more.
+
+5. Trees :- 1. A Tree is a Non-Linear Data Structure and a hierarchy containing a collection of nodes 
+            such that each node of the tree stores a value and a list of references to other nodes (the "children").
+
+            2. The Tree data structure is a specialized method to arrange and collect data in the computer to be utilized more effectively.
+
+            Binary Tree: A Tree data structure where each parent node can have at most two children is termed a Binary Tree.
+            Binary Search Tree: A Binary Search Tree is a Tree data structure where we can easily maintain a sorted list of numbers.
+
+          use :- 1. Trees implement hierarchical structures in computer systems like directories and file systems.
+                 2. Trees are also used to implement the navigation structure of a website.
+                 3. We can generate code like Huffman's code using Trees.
+                 4. Trees are also helpful in decision-making in Gaming applications.
+
+6. Graphs :- 1. A Graph is comprising a finite number of nodes or vertices and the edges connecting them.
+             2. The Graphs are utilized to address problems of the real world in which it denotes the problem area as a network 
+                such as social networks, circuit networks, and telephone networks.
+
+        Ex and Use :-   1. Graphs help us represent routes and networks in transportation, travel, and communication applications.
+			2. Graphs are used to display routes in GPS.
+			3. Graphs also help us represent the interconnections in social networks and other network-based applications.
+			4. Graphs are utilized in mapping applications.
