@@ -1,0 +1,95 @@
+		------------ Exception Handling ----------
+
+1. What is Exception?
+Ans :- Exception is an mechanism that disrupts the normal flow of the program
+
+------------------------------------------------------------------------------------------------
+
+2. What is Exception Handling in Java?
+
+Ans :- The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that the        normal flow of the application can be maintained.
+
+------------------------------------------------------------------------------------------------
+
+3. Advantage of Exception Handling?
+Ans :- The core advantage of exception handling is to maintain the normal flow of the application.
+
+------------------------------------------------------------------------------------------------
+
+4. How many types of Exception ? Difference between checked and unchecked exceptions?
+
+Ans :- There are mainly two types of exceptions: checked and unchecked:-
+       1) Checked Exception :-
+          The classes that directly inherit the Throwable class are known as checked exceptions.
+          For example : IOException, SQLException,ClassNotFoundException etc. 
+          Checked exceptions are checked at compile-time.
+
+       2) Unchecked Exception :-
+          The classes that inherit the RuntimeException are known as unchecked exceptions. 
+          For example : ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException etc. 
+          Unchecked exceptions are not checked at compile-time, but they are checked at runtime.
+
+------------------------------------------------------------------------------------------------
+
+5. What happens behind the code int data = 50/0;?
+
+Ans :- This code will throw an "ArithmeticException" at runtime because dividing by zero is mathematically        undefined.
+
+------------------------------------------------------------------------------------------------
+
+6. Why use multiple catch blocks?
+
+Ans :- Multiple catch blocks are used to handle different types of exceptions separately, allowing for specific        error handling for each case.
+
+------------------------------------------------------------------------------------------------
+
+7. Is there any possibility when the finally block is not executed?
+
+Ans :- Yes, in cases of system exit or an unhandled error that terminates the program, the finally block may not        execute.
+
+------------------------------------------------------------------------------------------------
+
+8. What is exception propagation?
+
+Ans :- Exception propagation is the process of passing an exception from one method to another in the call stack          until it's handled or reaches the top-level handler.
+
+------------------------------------------------------------------------------------------------
+
+9. Difference between the throw and throws keyword:
+
+Ans :- "throw" is used to explicitly throw an exception in a method. "throws" is used in a method declaration to          indicate that the method may throw certain exceptions and should be handled by the caller or propagated.
+
+------------------------------------------------------------------------------------------------
+
+10. How many Java Exception Keywords?
+
+Ans :- | Keyword  | Description                                                      
+              |----------|-----------------------------------------------------------------------------------------------
+       | try      | The "try" keyword is used to specify a block for exception handling. Must be followed by catch 		    or finally. 
+       | catch    | The "catch" block is used to handle the exception. It must be preceded by try block which                          means we can't use catch block alone.  
+       | finally  | The "finally" block is used to execute the necessary code of the program. It is executed                           whether an exception is handled or not.
+       | throw    | The "throw" keyword is used to throw an exception.
+       | throws   | Used to declare exceptions in a method signature, indicating that exceptions may occur in the                      method. Does not throw an exception itself. 
+-----------------------------------------------------------------------------------------------------------------
+
+Hierarchy Of Exception :-
+
+   	                        	      Throwable Class
+						    |
+						    |
+                -------------------------------------------------------------------------
+                |                                                                       |
+            Exception								      Errors
+                |								      |
+		|           							      |
+            	-----> Checked Exception ----> IO Exception                           ---> OutOfMemoryError
+ 	        |                        ----> SQL Exception                          ---> StackOfOverFlowError
+                |                        ----> Class Not Found Exception
+                |
+                -----> Unchecked Exception ----> Arithmetic Exception
+                                           ----> Null Pointer Exception                           							           ----> NumberFormat Exception
+                                           ----> IndexOut Of Bounds Exception
+                                                            |
+                                                            |
+        					    	    ----> ArrayIndexOutBound Exception
+                                                            ----> StringIndexOutBound Exception	
