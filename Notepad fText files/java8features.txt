@@ -44,113 +44,96 @@ Java 8 provides following features for Java Programming:
 
 6.Stream API :- Stream API:
 
-The Stream API in Java provides a wide range of methods that allow you to perform various operations on streams of data. These operations can be categorized into two main types: intermediate and terminal operations.
+-The Stream API in Java provides a wide range of methods that allow you to perform various operations on streams of data. 
+-These operations can be categorized into two main types: intermediate and terminal operations.
+-You can use streams to filter, collect, print, and convert from one data structure to another, among other operations.
 
-Intermediate Operations:
+ 1. Intermediate Operations :- Intermediate operations return a new stream and allow you to perform transformations and filtering on the data in the stream.
+ 2. Terminal operations :- Terminal operations close the stream and produce a result or a side effect.
 
-Intermediate operations return a new stream and allow you to perform transformations and filtering on the data in the stream.
+--> Intermediate Operations Methods:
+1. filter(Predicate<T> predicate):Filters elements based on a condition and returns a new stream with the filtered elements.
 
-filter(Predicate<T> predicate): Filters the elements in the stream based on the given predicate.
-Example:
+Example: List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> evenNumbers = numbers.stream()
+       .filter(x -> x % 2 == 0) // Filters even numbers
+       .collect(Collectors.toList());
 
-java
-Copy code
-stream.filter(x -> x % 2 == 0); // Filters even numbers
-map(Function<T, R> mapper): Transforms each element in the stream using the provided mapping function.
-Example:
+2. map(Function<T, R> mapper): Transforms elements using a mapping function and returns a new stream with the transformed elements.
+ 
+Example: List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+         List<String> uppercaseNames = names.stream()
+        .map(String::toUpperCase) // Converts names to uppercase
+        .collect(Collectors.toList());
+ 
 
-java
-Copy code
-stream.map(String::toUpperCase); // Converts each element to uppercase
-flatMap(Function<T, Stream<R>> mapper): Similar to map, but it flattens the result, which can be a Stream of elements.
-Example:
+3. sorted(): The Sorted Method is used to sort the elements in the stream in there natural order 
+Example: List<Integer> numbers = Arrays.asList(5, 2, 8, 1, 9, 4);
+         numbers.stream().sorted().collect.(Collectors.toList());
 
-java
-Copy code
-stream.flatMap(line -> Arrays.stream(line.split(" ")); // Splits lines into words
-distinct(): Removes duplicate elements from the stream.
-Example:
+         List<String> fruits = List.of("apple", "banana", "cherry", "date", "fig");
+         List<String> sortedFruits = fruits.stream()
+            .sorted((a, b) -> b.compareTo(a)) // Sort in reverse order
+            .collect(Collectors.toList());
 
-java
-Copy code
-stream.distinct(); // Removes duplicates
-sorted() and sorted(Comparator<T> comparator): Sorts the elements in the stream in their natural order or according to the provided comparator.
-Examples:
 
-java
-Copy code
-stream.sorted(); // Sorts in natural order
-stream.sorted((a, b) -> b.compareTo(a)); // Sorts in reverse order
-peek(Consumer<T> action): Performs an action on each element in the stream and returns the original stream, often used for debugging.
-Example:
+4. distinct():- The distinct method removes duplicate elements from the stream.
+Examples: List<String> colors = Arrays.asList("red", "blue", "green", "red", "yellow", "blue");
+          List<String> uniqueColors = colors.stream().distinct().collect(Collectors.toList());   //Remove Duplicate Elments
 
-java
-Copy code
-stream.peek(System.out::println); // Prints each element and returns the original stream
-Terminal Operations:
+ 
+ 
 
-Terminal operations close the stream and produce a result or a side effect.
+--> Terminal Operations Methods:
+1. forEach(Consumer<T> action): Performs an action on each element in the stream.
+Example:  List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+          names.stream().forEach(System.out::println); // Prints each name
 
-forEach(Consumer<T> action): Performs an action on each element in the stream.
-Example:
+ 
+2. collect(): Collects elements into a collection or other data structure specified by the collector.
+Example: List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+         List<Integer> evenNumbers = numbers.stream()
+        .filter(x -> x % 2 == 0) // Filters even numbers
+        .collect(Collectors.toList());
 
-java
-Copy code
-stream.forEach(System.out::println); // Prints each element
-collect(Collector<T, A, R> collector): Collects the elements of the stream into a collection or other data structure specified by the collector.
-Example:
+ 
 
-java
-Copy code
-List<String> list = stream.collect(Collectors.toList());
-toArray(): Converts the stream into an array.
-Example:
 
-java
-Copy code
-Object[] array = stream.toArray();
-count(): Returns the count of elements in the stream.
-Example:
+3. count(): Returns the count of elements in the stream.
+Example: List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+         long nameCount = names.stream().count(); // Counts the number of names
 
-java
-Copy code
-long count = stream.count();
+
+-----------------Much More---------------
 anyMatch(Predicate<T> predicate): Checks if any element in the stream matches the given predicate.
 Example:
 
-java
-Copy code
+ List<String> list = stream.collect(Collectors.toList());
+toArray(): Converts the stream into an array.
+Example:
+
+
 boolean anyMatch = stream.anyMatch(x -> x > 10); // Checks if any element is greater than 10
 allMatch(Predicate<T> predicate): Checks if all elements in the stream match the given predicate.
 Example:
-
-java
-Copy code
+ 
 boolean allMatch = stream.allMatch(x -> x > 0); // Checks if all elements are positive
 noneMatch(Predicate<T> predicate): Checks if no elements in the stream match the given predicate.
 Example:
-
-java
-Copy code
+ 
 boolean noneMatch = stream.noneMatch(x -> x < 0); // Checks if no elements are negative
 min(Comparator<T> comparator) and max(Comparator<T> comparator): Returns the minimum and maximum elements in the stream according to the provided comparator.
 Examples:
-
-java
-Copy code
+ 
 Optional<Integer> min = stream.min(Comparator.naturalOrder());
 Optional<Integer> max = stream.max(Comparator.reverseOrder());
 reduce(): Performs a reduction on the elements of the stream. It can be used to perform various aggregate operations.
 Example:
-
-java
-Copy code
+ 
 int sum = stream.reduce(0, (a, b) -> a + b); // Computes the sum
 findFirst() and findAny(): Returns the first element or any element from the stream (useful for short-circuiting operations).
 Example:
-
-java
-Copy code
+ 
 Optional<T> first = stream.findFirst();
 Optional<T> any = stream.findAny();
 Features:
@@ -158,9 +141,9 @@ Features:
 Stream does not store elements.
 Stream is functional in nature.
 Stream is lazy and evaluates code only when required.
-Use:
+ 
 
-You can use streams to filter, collect, print, and convert from one data structure to another, among other operations.
+
 
 
  
